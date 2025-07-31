@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Doctors - EasyMed</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        .gradient-green-light {
+            background: linear-gradient(to right, #D1FAE5, #A7F3D0); /* Light emerald tones */
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header/Navigation (Minimal) -->
+    <header class="bg-white shadow-sm py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+<a href="index.html">
+    <svg width="80" height="80" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+                <feDropShadow dx="0" dy="4" blur="8" flood-color="rgba(0,0,0,0.1)"/>
+            </filter>
+            <radialGradient id="bgGradient" cx="50%" cy="30%" r="70%">
+                <stop offset="0%" style="stop-color:#f8fdff;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#ffffff;stop-opacity:1" />
+            </radialGradient>
+        </defs>
+        <circle cx="100" cy="100" r="95" fill="url(#bgGradient)" filter="url(#shadow)"/>
+        <g transform="translate(100, 75)">
+            <path d="M 0 -18 L 2 -18 L 3 -22 L 6 -22 L 7 -18 L 11 -16 L 13 -20 L 16 -18 L 14 -14 L 18 -11 L 20 -13 L 22 -10 L 18 -7 L 18 -2 L 22 0 L 20 3 L 16 1 L 14 4 L 18 7 L 16 10 L 13 8 L 11 12 L 7 14 L 6 18 L 3 18 L 2 14 L -2 14 L -3 18 L -6 18 L -7 14 L -11 12 L -13 8 L -16 10 L -18 7 L -14 4 L -16 1 L -20 3 L -22 0 L -18 -2 L -18 -7 L -22 -10 L -20 -13 L -16 -11 L -14 -14 L -18 -18 L -16 -20 L -13 -18 L -11 -22 L -7 -22 L -6 -18 L -3 -18 L -2 -22 L 0 -22 Z" fill="#20B2AA"/>
+            <circle cx="0" cy="0" r="12" fill="#20B2AA"/>
+            <path d="M 0 -2 C -1.5 -5.5, -6 -5.5, -6 -1.5 C -6 1.5, 0 6, 0 6 C 0 6, 6 1.5, 6 -1.5 C 6 -5.5, 1.5 -5.5, 0 -2 Z" fill="white"/>
+        </g>
+        <text x="100" y="135" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="32" font-weight="600" fill="#1a202c" text-anchor="middle">EasyMed</text>
+    </svg>
+</a>
+            <nav>
+                <ul class="flex space-x-6 text-gray-700 font-medium">
+                    <li><a href="index.html" class="hover:text-emerald-500 transition duration-200">Home</a></li>
+                    <li><a href="doctors.html" class="hover:text-emerald-500 transition duration-200">Doctors</a></li>
+                    <li><a href="appointment.html" class="hover:text-emerald-500 transition duration-200">Book Appointment</a></li>
+                    <li><a href="register.html" class="hover:text-emerald-500 transition duration-200">Register</a></li>
+                    <li><a href="login.html" class="hover:text-emerald-500 transition duration-200">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Doctors Section Hero -->
+    <section class="gradient-green-light text-gray-800 py-16 text-center rounded-b-3xl mx-auto shadow-xl">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-4">Meet Our Dedicated Specialists</h2>
+            <p class="text-lg opacity-90 max-w-xl mx-auto">Highly qualified and compassionate doctors committed to your well-being.</p>
+        </div>
+    </section>
+
+            <!-- Doctors Grid -->
+           <section class="py-16 bg-white mx-4 mt-8 rounded-2xl shadow-lg">
+                <div class="container mx-auto px-4">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-8">Paediatrics</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                        <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 ease-in-out p-6 flex flex-col justify-center items-center">
+    <div class="mb-2">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b7d89946-0a30-40fc-afa8-d1e37f7399cb.png"
+             alt="Stylized cartoon male doctor with gray hair, glasses, and a friendly smile"
+             class="w-16 h-16 rounded-full object-cover border-2 border-emerald-300 shadow" />
+    </div>
+    <h4 class="text-xl font-bold text-gray-800 mb-2">Dr Munawar Siyal</h4>
+</div>
+                        <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 ease-in-out p-6 flex flex-col justify-center items-center">
+    <div class="mb-2">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e4afeda0-db3d-4423-8fa2-62e51f7ce330.png"
+             alt="Bitmoji avatar of Dr Ali Akbar Siyal"
+             class="w-16 h-16 rounded-full object-cover border-2 border-emerald-300 shadow" />
+    </div>
+    <h4 class="text-xl font-bold text-gray-800 mb-2">Dr Ali Akbar Siyal</h4>
+</div>
+                        <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 ease-in-out p-6 flex flex-col justify-center items-center">
+    <div class="mb-2">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f672f047-a038-4ad7-b5af-2f2c5bdb2a45.png"
+             alt="Bitmoji avatar of Dr Ameer AlI Jamali"
+             class="w-16 h-16 rounded-full object-cover border-2 border-emerald-300 shadow" />
+    </div>
+    <h4 class="text-xl font-bold text-gray-800 mb-2">Dr Ameer AlI Jamali</h4>
+</div>
+                        <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 ease-in-out p-6 flex flex-col justify-center items-center">
+    <div class="mb-2">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b6788f35-a565-4d21-9b78-e590c4aefd93.png"
+             alt="Bitmoji avatar of Dr Ali Asghar Shaikh"
+             class="w-16 h-16 rounded-full object-cover border-2 border-emerald-300 shadow" />
+    </div>
+    <h4 class="text-xl font-bold text-gray-800 mb-2">Dr Ali Asghar Shaikh</h4>
+</div>
+                        <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 ease-in-out p-6 flex flex-col justify-center items-center">
+    <div class="mb-2">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a71f148d-4a0d-4fb1-bf96-355ea87f8284.png"
+             alt="Bitmoji avatar of Dr Ambar Ali Siyal"
+             class="w-16 h-16 rounded-full object-cover border-2 border-emerald-300 shadow" />
+    </div>
+    <h4 class="text-xl font-bold text-gray-800 mb-2">Dr Ambar Ali Siyal</h4>
+</div>
+                        <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 ease-in-out p-6 flex flex-col justify-center items-center">
+    <div class="mb-2">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b19568a5-fef8-41f9-8f81-1e46814d240a.png"
+             alt="Bitmoji avatar of Dr Sadiq Siyal"
+             class="w-16 h-16 rounded-full object-cover border-2 border-emerald-300 shadow" />
+    </div>
+    <h4 class="text-xl font-bold text-gray-800 mb-2">Dr Sadiq Siyal</h4>
+</div>
+                    </div>
+
+                    <h3 class="text-3xl font-bold text-gray-800 mb-8">Physician</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                        <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 ease-in-out p-6 flex flex-col justify-center items-center">
+    <div class="mb-2">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d1511c12-6db8-485d-9156-04452e1054a9.png"
+             alt="Bitmoji avatar of Prof: Rafiq Memon"
+             class="w-16 h-16 rounded-full object-cover border-2 border-emerald-300 shadow" />
+    </div>
+    <h4 class="text-xl font-bold text-gray-800 mb-2">Prof: Rafiq Memon</h4>
+</div>
+                        <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 ease-in-out p-6 flex flex-col justify-center items-center">
+    <div class="mb-2">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1d6f58e6-9681-41e9-8ab1-ec516510e238.png"
+             alt="Bitmoji avatar of Dr Shamsudin Shaikh"
+             class="w-16 h-16 rounded-full object-cover border-2 border-emerald-300 shadow" />
+    </div>
+    <h4 class="text-xl font-bold text-gray-800 mb-2">Dr Shamsudin Shaikh</h4>
+</div>
+                        <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 ease-in-out p-6 flex flex-col justify-center items-center">
+    <div class="mb-2">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4414233f-2eb0-46cb-8bbb-332ec24f40fb.png"
+             alt="Bitmoji avatar of Prof: Nasrullah Amir"
+             class="w-16 h-16 rounded-full object-cover border-2 border-emerald-300 shadow" />
+    </div>
+    <h4 class="text-xl font-bold text-gray-800 mb-2">Prof: Nasrullah Amir</h4>
+</div>
+                        <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 ease-in-out p-6 flex flex-col justify-center items-center">
+    <div class="mb-2">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e1d8d7af-b44f-48fd-92f1-dde541488096.png"
+             alt="Bitmoji avatar of Dr Anwar Ali Jamali"
+             class="w-16 h-16 rounded-full object-cover border-2 border-emerald-300 shadow" />
+    </div>
+    <h4 class="text-xl font-bold text-gray-800 mb-2">Dr Anwar Ali Jamali</h4>
+</div>
+                        <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 ease-in-out p-6 flex flex-col justify-center items-center">
+    <div class="mb-2">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/aebf0bc6-f57f-4524-b2bc-533425540766.png"
+             alt="Bitmoji avatar of Dr Khawar Hussain"
+             class="w-16 h-16 rounded-full object-cover border-2 border-emerald-300 shadow" />
+    </div>
+    <h4 class="text-xl font-bold text-gray-800 mb-2">Dr Khawar Hussain</h4>
+</div>
+                    </div>
+
+                    <h3 class="text-3xl font-bold text-gray-800 mb-8">Neurologist</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                        <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 ease-in-out p-6 flex flex-col justify-center items-center">
+    <div class="mb-2">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8087f2a8-f8e5-4d62-89f3-f97a37d783ac.png"
+                 alt="Bitmoji avatar of Dr Abdul Razzaq Mari"
+                 class="w-16 h-16 rounded-full object-cover border-2 border-emerald-300 shadow" />
+    </div>
+    <h4 class="text-xl font-bold text-gray-800 mb-2">Dr Abdul Razzaq Mari</h4>
+</div>
+                        <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 ease-in-out p-6 flex flex-col justify-center items-center">
+    <div class="mb-2">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/85cf1704-1264-4723-8762-17616e85d889.png"
+             alt="Bitmoji avatar of Dr Awais Bashir Larak"
+             class="w-16 h-16 rounded-full object-cover border-2 border-emerald-300 shadow" />
+    </div>
+    <h4 class="text-xl font-bold text-gray-800 mb-2">Dr Awais Bashir Larak</h4>
+</div>
+                        <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 ease-in-out p-6 flex flex-col justify-center items-center">
+    <div class="mb-2">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0a901d14-b6e2-47fd-88b3-00ac4ab77e2a.png"
+             alt="Bitmoji avatar of Dr Noor Nabi Siyal"
+             class="w-16 h-16 rounded-full object-cover border-2 border-emerald-300 shadow" />
+    </div>
+    <h4 class="text-xl font-bold text-gray-800 mb-2">Dr Noor Nabi Siyal</h4>
+</div>
+                    </div>
+
+                    <h3 class="text-3xl font-bold text-gray-800 mb-8">Cardiologist</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 ease-in-out p-6 flex flex-col justify-center items-center">
+    <div class="mb-2">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bd5d0d1f-a8bc-43e8-9e87-ac1e5c4f4f7e.png"
+             alt="Bitmoji avatar of Dr Jagdeesh Khatri"
+             class="w-16 h-16 rounded-full object-cover border-2 border-emerald-300 shadow" />
+    </div>
+    <h4 class="text-xl font-bold text-gray-800 mb-2">Dr Jagdeesh Khatri</h4>
+</div>
+                        <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 ease-in-out p-6 flex flex-col justify-center items-center">
+    <div class="mb-2">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/eb2e8abb-a160-4df2-9b27-65812b144b1d.png"
+             alt="Bitmoji avatar of Dr Zafar Iqbal"
+             class="w-16 h-16 rounded-full object-cover border-2 border-emerald-300 shadow" />
+    </div>
+    <h4 class="text-xl font-bold text-gray-800 mb-2">Dr Zafar Iqbal</h4>
+</div>
+                        <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 ease-in-out p-6 flex flex-col justify-center items-center">
+    <div class="mb-2">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5c40d440-03f4-4a84-944c-51ec2335c92c.png"
+             alt="Bitmoji avatar of Dr Ilahi Bux"
+             class="w-16 h-16 rounded-full object-cover border-2 border-emerald-300 shadow" />
+    </div>
+    <h4 class="text-xl font-bold text-gray-800 mb-2">Dr Ilahi Bux</h4>
+</div>
+                        <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 ease-in-out p-6 flex flex-col justify-center items-center">
+                            <div class="mb-2">
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7859de2d-4dcd-406e-a517-2c4c5a61ac83.png"
+                                     alt="Bitmoji avatar of Dr Asad Khan"
+                                     class="w-16 h-16 rounded-full object-cover border-2 border-emerald-300 shadow" />
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Dr Asad Khan</h4>
+                        </div>
+                        <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 ease-in-out p-6 flex flex-col justify-center items-center">
+                            <div class="mb-2">
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5afbd391-98a7-4c8a-a282-f0dcfa895c7e.png"
+                                     alt="Bitmoji avatar of Prof Dr Tariq Mahmood"
+                                     class="w-16 h-16 rounded-full object-cover border-2 border-emerald-300 shadow" />
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Prof Dr Tariq Mahmood</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12 rounded-t-3xl shadow-xl">
+        <div class="container mx-auto px-4 text-center text-sm">
+            &copy; 2025 EasyMed. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,271 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    color: #333;
+}
+
+nav {
+    background: #0056b3;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #003d80;
+    color: #f0f4f8;
+    outline: none;
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 40px 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #002855;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #334e68;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 700;
+    color: #102a43;
+}
+
+form input[type="text"],
+form input[type="number"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    box-sizing: border-box;
+    border: 1px solid #bcccdc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #0056b3;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover,
+form button:focus {
+    background-color: #003d80;
+    outline: none;
+}
+
+#medicine-suggestions {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e1e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #334e68;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    main {
+        margin: 20px 15px;
+        padding: 30px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+/* Doctor theme additions */
+
+body {
+    background: linear-gradient(135deg, #e0f7fa, #ffffff);
+    color: #004d40;
+}
+
+nav {
+    background: #00796b;
+    box-shadow: 0 2px 8px rgba(0, 121, 107, 0.5);
+}
+
+nav ul li a {
+    color: #e0f2f1;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #004d40;
+    color: #a7ffeb;
+}
+
+main {
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 77, 64, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    position: relative;
+}
+
+.hero h1 {
+    color: #00796b;
+}
+
+form label {
+    color: #004d40;
+}
+
+form input[type="text"],
+form input[type="number"],
+form select,
+form textarea {
+    border: 1px solid #004d40;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #00796b;
+}
+
+form button {
+    background-color: #00796b;
+}
+
+form button:hover,
+form button:focus {
+    background-color: #004d40;
+}
+
+/* Doctors list styling */
+#doctors-list div {
+    display: flex;
+    align-items: center;
+    background: #e0f2f1;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 77, 64, 0.1);
+}
+
+#doctors-list div h3 {
+    margin: 0 0 5px 0;
+    color: #004d40;
+}
+
+#doctors-list div p {
+    margin: 2px 0;
+    color: #00695c;
+}
+
+/* Doctor image styling */
+.doctor-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    box-shadow: 0 2px 8px rgba(0, 77, 64, 0.3);
+}
+
+/* Booking section doctor display removed as per request */
+
+/* Responsive */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    #doctors-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Circular logo styling */
+.logo-circle {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}

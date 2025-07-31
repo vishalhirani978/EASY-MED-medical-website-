@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Patient Registration - EasyMed</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        .gradient-green-form-bg {
+            background: linear-gradient(to right, #F0FDF4, #D1FAE5);
+        }
+        .btn-register {
+            background-color: #16a34a;
+            color: white;
+            font-weight: 600;
+            padding: 0.75rem 2rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(22, 163, 74, 0.5), 0 4px 6px -2px rgba(22, 163, 74, 0.3);
+            transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .btn-register:hover {
+            background-color: #15803d;
+            box-shadow: 0 12px 17px -4px rgba(21, 128, 61, 0.6), 0 6px 8px -3px rgba(21, 128, 61, 0.4);
+        }
+        input[type="text"], input[type="email"], input[type="password"], input[type="number"], select {
+            @apply w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <header class="bg-white shadow-sm py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+<a href="index.html">
+    <svg width="80" height="80" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+                <feDropShadow dx="0" dy="4" blur="8" flood-color="rgba(0,0,0,0.1)"/>
+            </filter>
+            <radialGradient id="bgGradient" cx="50%" cy="30%" r="70%">
+                <stop offset="0%" style="stop-color:#f8fdff;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#ffffff;stop-opacity:1" />
+            </radialGradient>
+        </defs>
+        <circle cx="100" cy="100" r="95" fill="url(#bgGradient)" filter="url(#shadow)"/>
+        <g transform="translate(100, 75)">
+            <path d="M 0 -18 L 2 -18 L 3 -22 L 6 -22 L 7 -18 L 11 -16 L 13 -20 L 16 -18 L 14 -14 L 18 -11 L 20 -13 L 22 -10 L 18 -7 L 18 -2 L 22 0 L 20 3 L 16 1 L 14 4 L 18 7 L 16 10 L 13 8 L 11 12 L 7 14 L 6 18 L 3 18 L 2 14 L -2 14 L -3 18 L -6 18 L -7 14 L -11 12 L -13 8 L -16 10 L -18 7 L -14 4 L -16 1 L -20 3 L -22 0 L -18 -2 L -18 -7 L -22 -10 L -20 -13 L -16 -11 L -14 -14 L -18 -18 L -16 -20 L -13 -18 L -11 -22 L -7 -22 L -6 -18 L -3 -18 L -2 -22 L 0 -22 Z" fill="#20B2AA"/>
+            <circle cx="0" cy="0" r="12" fill="#20B2AA"/>
+            <path d="M 0 -2 C -1.5 -5.5, -6 -5.5, -6 -1.5 C -6 1.5, 0 6, 0 6 C 0 6, 6 1.5, 6 -1.5 C 6 -5.5, 1.5 -5.5, 0 -2 Z" fill="white"/>
+        </g>
+        <text x="100" y="135" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="32" font-weight="600" fill="#1a202c" text-anchor="middle">EasyMed</text>
+    </svg>
+</a>
+            <nav>
+                <ul class="flex space-x-6 text-gray-700 font-medium">
+                    <li><a href="index.html" class="hover:text-emerald-500 transition duration-200">Home</a></li>
+                    <li><a href="doctors.html" class="hover:text-emerald-500 transition duration-200">Doctors</a></li>
+                    <li><a href="appointment.html" class="hover:text-emerald-500 transition duration-200">Book Appointment</a></li>
+                    <li><a href="register.html" class="hover:text-emerald-500 transition duration-200">Register</a></li>
+                    <li><a href="login.html" class="hover:text-emerald-500 transition duration-200">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="py-16 gradient-green-form-bg mx-4 mt-8 rounded-2xl shadow-lg">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-4xl font-bold text-gray-800 text-center mb-10">Patient Registration</h2>
+            <div class="bg-white p-8 md:p-10 rounded-xl shadow-md">
+                <form id="registration-form">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="patientName" class="block text-gray-700 text-sm font-semibold mb-2">Patient Name</label>
+                            <input type="text" id="patientName" name="patientName" placeholder="Ali Akbar" required />
+                        </div>
+                        <div>
+                            <label for="fatherName" class="block text-gray-700 text-sm font-semibold mb-2">Father's Name</label>
+                            <input type="text" id="fatherName" name="fatherName" placeholder="Akbar" required />
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="cnic" class="block text-gray-700 text-sm font-semibold mb-2">CNIC</label>
+                            <input type="text" id="cnic" name="cnic" placeholder="12345-1234567-1" required />
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 text-sm font-semibold mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="ali.akbar@gmail.com" required />
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="password" class="block text-gray-700 text-sm font-semibold mb-2">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Enter your password" required />
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 text-sm font-semibold mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+92 3123-456789" required />
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="age" class="block text-gray-700 text-sm font-semibold mb-2">Age</label>
+                            <input type="number" id="age" name="age" placeholder="30" required />
+                        </div>
+                        <div>
+                            <label for="disease" class="block text-gray-700 text-sm font-semibold mb-2">Disease</label>
+                            <input type="text" id="disease" name="disease" placeholder="Diabetes" required />
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn-register">Register</button>
+                    </div>
+                    <div id="registration-message" class="mt-4 text-center text-red-600"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-8 mt-12 rounded-t-3xl shadow-xl">
+        <div class="container mx-auto px-4 text-center text-sm">
+            &copy; 2025 EasyMed. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('registration-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const form = e.target;
+            const data = {
+                patientName: form.patientName.value,
+                fatherName: form.fatherName.value,
+                cnic: form.cnic.value,
+                email: form.email.value,
+                password: form.password.value,
+                phone: form.phone.value,
+                age: form.age.value,
+                disease: form.disease.value
+            };
+            try {
+                const response = await fetch('/patients/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                const messageDiv = document.getElementById('registration-message');
+                if (response.ok) {
+                    const res = await response.json();
+                    messageDiv.style.color = 'green';
+                    messageDiv.textContent = `Registration successful. Your Patient ID is ${res.patientId}`;
+                    form.reset();
+                } else {
+                    const errorText = await response.text();
+                    messageDiv.style.color = 'red';
+                    messageDiv.textContent = `Registration failed: ${errorText}`;
+                }
+            } catch (error) {
+                const messageDiv = document.getElementById('registration-message');
+                messageDiv.style.color = 'red';
+                messageDiv.textContent = 'Registration failed: Network error';
+            }
+        });
+    </script>
+</body>
+</html>

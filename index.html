@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8; /* Light background */
+            color: #333;
+        }
+        .gradient-green {
+            background: linear-gradient(to right, #6EE7B7, #34D399); /* Tailwind's emerald-400 to emerald-500 */
+        }
+        .btn-primary {
+            @apply bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-3 px-6 rounded-xl shadow-lg transition duration-300 ease-in-out;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header/Navigation (Minimal) -->
+    <header class="bg-white shadow-sm py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="index.html">
+                <svg width="80" height="80" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Circular background with subtle greenish gradient -->
+                    <defs>
+                        <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+                            <feDropShadow dx="0" dy="4" blur="8" flood-color="rgba(0,0,0,0.1)"/>
+                        </filter>
+                        <radialGradient id="bgGradient" cx="50%" cy="30%" r="70%">
+                            <stop offset="0%" style="stop-color:#f8fdff;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#ffffff;stop-opacity:1" />
+                        </radialGradient>
+                    </defs>
+                    <circle cx="100" cy="100" r="95" fill="url(#bgGradient)" filter="url(#shadow)"/>
+                    <g transform="translate(100, 75)">
+                        <path d="M 0 -18 L 2 -18 L 3 -22 L 6 -22 L 7 -18 L 11 -16 L 13 -20 L 16 -18 L 14 -14 L 18 -11 L 20 -13 L 22 -10 L 18 -7 L 18 -2 L 22 0 L 20 3 L 16 1 L 14 4 L 18 7 L 16 10 L 13 8 L 11 12 L 7 14 L 6 18 L 3 18 L 2 14 L -2 14 L -3 18 L -6 18 L -7 14 L -11 12 L -13 8 L -16 10 L -18 7 L -14 4 L -16 1 L -20 3 L -22 0 L -18 -2 L -18 -7 L -22 -10 L -20 -13 L -16 -11 L -14 -14 L -18 -18 L -16 -20 L -13 -18 L -11 -22 L -7 -22 L -6 -18 L -3 -18 L -2 -22 L 0 -22 Z" fill="#20B2AA"/>
+                        <circle cx="0" cy="0" r="12" fill="#20B2AA"/>
+                        <path d="M 0 -2 C -1.5 -5.5, -6 -5.5, -6 -1.5 C -6 1.5, 0 6, 0 6 C 0 6, 6 1.5, 6 -1.5 C 6 -5.5, 1.5 -5.5, 0 -2 Z" fill="white"/>
+                    </g>
+                    <text x="100" y="135" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="32" font-weight="600" fill="#1a202c" text-anchor="middle">EasyMed</text>
+                </svg>
+            </a>
+            <nav>
+                <ul class="flex space-x-6 text-gray-700 font-medium">
+                    <li><a href="index.html" class="hover:text-emerald-500 transition duration-200">Home</a></li>
+                    <li><a href="doctors.html" class="hover:text-emerald-500 transition duration-200">Doctors</a></li>
+                    <li><a href="appointment.html" class="hover:text-emerald-500 transition duration-200">Book Appointment</a></li>
+                    <li><a href="register.html" class="hover:text-emerald-500 transition duration-200">Register</a></li>
+                    <li><a href="login.html" class="hover:text-emerald-500 transition duration-200">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-green text-white py-20 text-center rounded-b-3xl mx-auto shadow-xl">
+        <div class="container mx-auto px-4">
+            <h2 class="text-5xl font-bold mb-4">Your Health, Our Priority</h2>
+            <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">Providing compassionate and comprehensive healthcare solutions for a healthier you.</p>
+            <div class="text-center">
+                <button type="submit" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 px-8 rounded-xl shadow-lg transition duration-300 ease-in-out"> Book an Appointment</button>
+        </div>
+    </section>
+
+    <!-- Services Overview Section -->
+    <section class="mt-24">
+    <h3 class="text-4xl font-bold text-gray-800 mb-12 text-center">Our Specialized Care</h3>
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="p-8 rounded-xl shadow-md bg-gray-50 hover:shadow-lg transition duration-300">
+                <div class="text-emerald-500 text-5xl mb-4">
+                    <!-- Icon: User Doctor -->
+                    <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14c4.418 0 8-1.79 8-4V7a4 4 0 00-8-4 4 4 0 00-8 4v3c0 2.21 3.582 4 8 4zm0 0v6m-4 0h8"></path></svg>
+                </div>
+                <h4 class="text-xl font-semibold text-gray-700 mb-3">General Physicians</h4>
+                <p class="text-gray-600">Consult with experienced general practitioners for routine checkups, common illnesses, and preventive care.</p>
+            </div>
+            <!-- Physicians & Specialists -->
+            <div class="p-8 rounded-xl shadow-md bg-gray-50 hover:shadow-lg transition duration-300">
+                <div class="text-emerald-500 text-5xl mb-4">
+                    <!-- Icon: Stethoscope -->
+                    <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 21a4 4 0 01-4-4V7a4 4 0 018 0v10a4 4 0 01-4 4zm8-4a4 4 0 01-4-4V7a4 4 0 018 0v6a4 4 0 01-4 4z"></path></svg>
+                </div>
+                <h4 class="text-xl font-semibold text-gray-700 mb-3">Specialist Consultations</h4>
+                <p class="text-gray-600">Book appointments with top physicians, cardiologists, neurologists, and other specialists for expert diagnosis and treatment.</p>
+            </div>
+            <!-- Online & Emergency Care -->
+            <div class="p-8 rounded-xl shadow-md bg-gray-50 hover:shadow-lg transition duration-300">
+                <div class="text-emerald-500 text-5xl mb-4">
+                    <!-- Icon: Video Call -->
+                    <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14m-6 2a2 2 0 01-2-2V8a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H9z"></path></svg>
+                </div>
+                <h4 class="text-xl font-semibold text-gray-700 mb-3">Online & Urgent Care</h4>
+                <p class="text-gray-600">Access virtual consultations, get medical advice from home, or receive urgent care for immediate health concerns.</p>
+            </div>
+        </div>
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Diagnostics -->
+            <div class="p-8 rounded-xl shadow-md bg-gray-50 hover:shadow-lg transition duration-300">
+                <div class="text-emerald-500 text-5xl mb-4">
+                    <!-- Icon: Lab -->
+                    <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2a2 2 0 012-2h2a2 2 0 012 2v2m-6 0h6"></path></svg>
+                </div>
+                <h4 class="text-xl font-semibold text-gray-700 mb-3">Diagnostics & Lab Tests</h4>
+                <p class="text-gray-600">Book lab tests and diagnostic services online and access your reports securely through your EasyMed account.</p>
+            </div>
+            <!-- Health Records -->
+            <div class="p-8 rounded-xl shadow-md bg-gray-50 hover:shadow-lg transition duration-300">
+                <div class="text-emerald-500 text-5xl mb-4">
+                    <!-- Icon: Folder -->
+                    <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7a2 2 0 012-2h4l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"></path></svg>
+                </div>
+                <h4 class="text-xl font-semibold text-gray-700 mb-3">Digital Health Records</h4>
+                <p class="text-gray-600">Securely store, access, and share your medical records and prescriptions anytime, anywhere.</p>
+            </div>
+            <!-- Family Care -->
+            <div class="p-8 rounded-xl shadow-md bg-gray-50 hover:shadow-lg transition duration-300">
+                <div class="text-emerald-500 text-5xl mb-4">
+                    <!-- Icon: Family -->
+                    <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="7" r="4"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.5 21a7.5 7.5 0 0113 0"/></svg>
+                </div>
+                <h4 class="text-xl font-semibold text-gray-700 mb-3">Family & Preventive Care</h4>
+                <p class="text-gray-600">Comprehensive care for all ages, including vaccination, maternal health, and wellness programs for your family.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-16 bg-emerald-50 mx-4 mt-8 rounded-2xl shadow-lg">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            <h3 class="text-4xl font-bold text-emerald-700 mb-8">How It Works</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 rounded-xl bg-white shadow-md">
+                    <div class="text-emerald-500 text-4xl mb-3">1</div>
+                    <h4 class="text-lg font-semibold mb-2">Sign Up or Login</h4>
+                    <p class="text-gray-600">Create your EasyMed account or log in to access all features.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-white shadow-md">
+                    <div class="text-emerald-500 text-4xl mb-3">2</div>
+                    <h4 class="text-lg font-semibold mb-2">Book Appointment</h4>
+                    <p class="text-gray-600">Choose your doctor and preferred time, then confirm your appointment online.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-white shadow-md">
+                    <div class="text-emerald-500 text-4xl mb-3">3</div>
+                    <h4 class="text-lg font-semibold mb-2">Get Quality Care</h4>
+                    <p class="text-gray-600">Visit the clinic or consult online and receive expert medical care.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-white mx-4 mt-8 rounded-2xl shadow-lg">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            <h3 class="text-4xl font-bold text-emerald-600 mb-8">What Our Patients Say</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-emerald-50 p-6 rounded-xl shadow">
+                    <p class="text-gray-700 italic mb-4">"EasyMed made it so simple to book an appointment with a specialist. The process was quick and the doctor was very professional!"</p>
+                    <div class="font-semibold text-emerald-700">— Ayesha K.</div>
+                </div>
+                <div class="bg-emerald-50 p-6 rounded-xl shadow">
+                    <p class="text-gray-700 italic mb-4">"I love the 24/7 support and the range of doctors available. Highly recommended for anyone looking for hassle-free healthcare."</p>
+                    <div class="font-semibold text-emerald-700">— Ahmed R.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-emerald-50 mx-4 mt-8 rounded-2xl shadow-lg mb-12">
+        <div class="container mx-auto px-4 max-w-3xl text-center">
+            <h3 class="text-4xl font-bold text-emerald-700 mb-6">Contact Us</h3>
+            <p class="text-gray-700 mb-6">Have questions or need help? Reach out to our support team anytime.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md flex-1">
+                    <h4 class="text-lg font-semibold text-emerald-700 mb-2">Email</h4>
+                    <p class="text-gray-600">support@easymed.com</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md flex-1">
+                    <h4 class="text-lg font-semibold text-emerald-700 mb-2">Phone</h4>
+                    <p class="text-gray-600">+92 300 1234567</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12 rounded-t-3xl shadow-xl">
+        <div class="container mx-auto px-4 text-center text-sm">
+            &copy; 2025 EasyMed. All rights reserved.
+        </div>
+    </footer>
+    </section>
+</body>
+</html>
