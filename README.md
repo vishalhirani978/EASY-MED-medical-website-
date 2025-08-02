@@ -12,6 +12,8 @@ It is mainly developed as a college project for demonstration, review, and learn
 Note: The website does not store registration or booking data, because GitHub Pages does not support a database. It serves as a front-end prototype only.
 
 => Technologies Used
+
+
 HTML
 
 CSS
