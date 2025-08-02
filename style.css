@@ -1,0 +1,761 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    color: #333;
+}
+
+nav {
+    background: #0056b3;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    gap: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #003d80;
+    color: #f0f4f8;
+    outline: none;
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 40px 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #002855;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #334e68;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 700;
+    color: #102a43;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form input[type="password"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    box-sizing: border-box;
+    border: 1px solid #004d40;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #00796b;
+    outline: none;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #00796b;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover,
+form button:focus {
+    background-color: #004d40;
+    outline: none;
+}
+
+#medicine-suggestions {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e1e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #334e68;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    main {
+        margin: 20px 15px;
+        padding: 30px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 900px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    nav ul li a {
+        font-size: 1rem;
+        padding: 10px 16px;
+    }
+}
+
+/* --- Responsive Font Sizes --- */
+h1, h2, h3, h4 {
+    line-height: 1.2;
+}
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.2rem; }
+@media (max-width: 600px) {
+    h1 { font-size: 1.7rem; }
+    h2 { font-size: 1.3rem; }
+    h3 { font-size: 1.1rem; }
+    h4 { font-size: 1rem; }
+}
+
+/* --- Responsive Buttons --- */
+a.button,
+button,
+.btn-login,
+.btn-register,
+.btn-appointment {
+    display: inline-block;
+    background-color: #00796b;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 12px 28px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 121, 107, 0.15);
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    text-decoration: none;
+    margin: 8px 0;
+}
+a.button:hover,
+button:hover,
+.btn-login:hover,
+.btn-register:hover,
+.btn-appointment:hover {
+    background-color: #004d40;
+    color: #a7ffeb;
+}
+@media (max-width: 600px) {
+    a.button,
+    button,
+    .btn-login,
+    .btn-register,
+    .btn-appointment {
+        font-size: 1rem;
+        padding: 10px 16px;
+        border-radius: 6px;
+    }
+}
+
+/* --- Responsive Doctors Section --- */
+@media (max-width: 900px) {
+    #doctors-list {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+}
+@media (max-width: 600px) {
+    #doctors-list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+
+/* --- Responsive Appointment Section --- */
+.appointment-section .form-group {
+    margin-bottom: 20px;
+}
+@media (max-width: 600px) {
+    .appointment-section .form-group {
+        margin-bottom: 12px;
+    }
+}
+
+/* --- Responsive Register & Login Section --- */
+.register-section,
+.login-section {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 30px 20px;
+    border-radius: 10px;
+}
+@media (max-width: 600px) {
+    .register-section,
+    .login-section {
+        max-width: 100%;
+        margin: 15px;
+        padding: 15px 8px;
+        border-radius: 6px;
+    }
+}
+
+/* --- Utility: Centered Content --- */
+.text-center {
+    text-align: center;
+}
+.my-8 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+@media (max-width: 600px) {
+    .my-8 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Doctor theme additions */
+
+body {
+    background: linear-gradient(135deg, #e0f7fa, #ffffff);
+    color: #004d40;
+}
+
+nav {
+    background: #00796b;
+    box-shadow: 0 2px 8px rgba(0, 121, 107, 0.5);
+}
+
+nav ul li a {
+    color: #e0f2f1;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #004d40;
+    color: #a7ffeb;
+}
+
+main {
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 77, 64, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    position: relative;
+}
+
+.hero h1 {
+    color: #00796b;
+}
+
+form label {
+    color: #004d40;
+}
+
+form input[type="text"],
+form input[type="number"],
+form select,
+form textarea {
+    border: 1px solid #004d40;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #00796b;
+}
+
+form button {
+    background-color: #00796b;
+}
+
+form button:hover,
+form button:focus {
+    background-color: #004d40;
+}
+
+/* Doctors list styling */
+#doctors-list div {
+    display: flex;
+    align-items: center;
+    background: #e0f2f1;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 77, 64, 0.1);
+}
+
+#doctors-list div h3 {
+    margin: 0 0 5px 0;
+    color: #004d40;
+}
+
+#doctors-list div p {
+    margin: 2px 0;
+    color: #00695c;
+}
+
+/* Doctor image styling */
+.doctor-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    box-shadow: 0 2px 8px rgba(0, 77, 64, 0.3);
+    position: relative;
+    z-index: 10;
+}
+
+/* Avatar container to position avatar overlapping the name */
+.doctor-card {
+    position: relative;
+    padding-left: 100px; /* space for avatar */
+}
+
+/* Introduction text below the doctor's name */
+.doctor-intro {
+    margin-top: 4px;
+    font-size: 0.875rem;
+    color: #4a5568; /* gray-600 */
+}
+
+/* Subtle background pattern for doctor cards */
+.bg-doctor-card {
+    background: #f0f9ff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1);
+    padding: 1rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.bg-doctor-card:hover {
+    box-shadow: 0 6px 18px rgba(0, 123, 255, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    #doctors-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    header .container {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 12px 8px !important;
+    }
+    header svg {
+        width: 48px !important;
+        height: 48px !important;
+        margin-bottom: 8px;
+    }
+    nav ul {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0 !important;
+    }
+    nav ul li {
+        margin: 6px 0 !important;
+    }
+    nav ul li a {
+        font-size: 1rem !important;
+        padding: 8px 0 !important;
+    }
+    /* Hero Section */
+    .gradient-green {
+        padding: 32px 8px !important;
+        border-radius: 0 0 18px 18px !important;
+    }
+    .gradient-green h2 {
+        font-size: 1.5rem !important;
+        margin-bottom: 12px !important;
+    }
+    .gradient-green p {
+        font-size: 1rem !important;
+        margin-bottom: 18px !important;
+    }
+    /* Services Section */
+    .mt-24 {
+        margin-top: 16px !important;
+    }
+    .grid,
+    .grid-cols-3,
+    .grid-cols-2 {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+    .p-8 {
+        padding: 16px !important;
+    }
+    h3, h4 {
+        font-size: 1.1rem !important;
+        margin-bottom: 10px !important;
+    }
+    /* How It Works Section */
+    .py-16 {
+        padding-top: 18px !important;
+        padding-bottom: 18px !important;
+    }
+    /* Register Button */
+    .my-8 {
+        margin: 16px 0 !important;
+    }
+    .bg-emerald-600 {
+        font-size: 1rem !important;
+        padding: 10px 18px !important;
+        border-radius: 7px !important;
+    }
+    /* Testimonials Section */
+    .max-w-4xl, .max-w-3xl {
+        max-width: 100% !important;
+    }
+    /* Contact Section */
+    .flex-col, .md\:flex-row {
+        flex-direction: column !important;
+        gap: 12px !important;
+    }
+    /* Footer */
+    footer {
+        padding: 18px 0 !important;
+        font-size: 0.95rem !important;
+        border-radius: 12px 12px 0 0 !important;
+    }
+}
+
+/* Circular logo styling */
+.logo-circle {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+/* Responsive header and navigation for mobile */
+@media (max-width: 600px) {
+    header {
+        padding: 10px 0;
+    }
+    .container {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+    nav ul li {
+        margin: 8px 0;
+    }
+    nav ul li a {
+        font-size: 1rem;
+        padding: 8px 0;
+    }
+    /* Logo SVG size */
+    header svg {
+        width: 48px !important;
+        height: 48px !important;
+    }
+    /* Section paddings and font sizes */
+    section,
+    .main-section,
+    .doctors-section,
+    .appointment-section,
+    .register-section,
+    .login-section {
+        padding: 16px 4px !important;
+        margin: 10px 0 !important;
+        border-radius: 8px !important;
+    }
+    h1, h2, h3 {
+        font-size: 1.3rem !important;
+    }
+    h4 {
+        font-size: 1.05rem !important;
+    }
+    /* Grid layouts become single column */
+    .grid,
+    .grid-cols-3,
+    .grid-cols-2,
+    .doctors-list,
+    .doctors-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+    /* Buttons */
+    .btn-primary,
+    .bg-emerald-600 {
+        font-size: 1rem !important;
+        padding: 10px 16px !important;
+        border-radius: 6px !important;
+    }
+    /* Form fields */
+    input, select, textarea {
+        font-size: 1rem !important;
+        padding: 10px !important;
+    }
+}
+
+/* Ensure desktop view remains unchanged above 600px */
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Entrance animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeInUp {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+/* Button click scale animation */
+@keyframes buttonClick {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn-click-animate:active {
+    animation: buttonClick 0.3s ease;
+}
+
+/* Header compact on scroll */
+header.compact {
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    transition: padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Header logo smaller on compact */
+header.compact svg {
+    width: 60px !important;
+    height: 60px !important;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+/* Header nav links smaller on compact */
+header.compact nav ul li a {
+    font-size: 0.9rem !important;
+    padding: 6px 8px !important;
+    transition: font-size 0.3s ease, padding 0.3s ease;
+}
+
+/* Card hover scale effect */
+.bg-gray-50:hover,
+.bg-gray-50:focus-within {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+}
+
+/* Touch friendly larger tap targets on mobile */
+@media (max-width: 600px) {
+    nav ul li a {
+        padding: 14px 12px !important;
+    }
+    button,
+    a.button,
+    .btn-login,
+    .btn-register,
+    .btn-appointment {
+        padding: 14px 20px !important;
+        font-size: 1.1rem !important;
+    }
+}
+
+/* Animate sections on scroll */
+.section-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* === Final Responsive Enhancements === */
+
+/* Small Mobile: under 480px */
+@media (max-width: 480px) {
+    .container, .main-section {
+        padding: 0 10px !important;
+    }
+
+    h1, h2 {
+        font-size: 1.5rem !important;
+    }
+
+    .btn-submit,
+    .btn-login,
+    button,
+    input,
+    select,
+    textarea {
+        font-size: 1rem !important;
+        padding: 10px 14px !important;
+    }
+
+    nav ul {
+        flex-direction: column !important;
+        gap: 8px !important;
+    }
+
+    nav ul li a {
+        font-size: 1rem !important;
+        padding: 8px 0 !important;
+    }
+}
+
+/* Tablet View: 481px–900px */
+@media (min-width: 481px) and (max-width: 900px) {
+    .main-section,
+    .register-section,
+    .login-section {
+        padding: 20px 24px !important;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    form input,
+    form select,
+    form textarea {
+        font-size: 1.05rem;
+    }
+
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    .btn-submit,
+    .btn-login {
+        font-size: 1.05rem !important;
+    }
+}
+
+/* Desktop View: over 900px */
+@media (min-width: 901px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    main {
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .btn-submit,
+    .btn-login {
+        padding: 14px 28px;
+        font-size: 1.2rem;
+    }
+}
