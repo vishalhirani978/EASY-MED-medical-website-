@@ -22,7 +22,7 @@ Java
 
 SQLite
 
-=>Project Purpose
+=> Project Purpose
 This project is created mainly for:
 
 Students and learners who want to see how an online booking system could be built.
