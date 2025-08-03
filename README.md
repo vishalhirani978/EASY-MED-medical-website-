@@ -1,42 +1,72 @@
-EASY MED
-EASY MED is a prototype website designed for booking doctor appointments.
-It demonstrates how an online medical booking platform can work.
+# 🩺 EASY MED – Your Doctor Appointment Prototype  
 
-=> Live Demo: EASY MED Website
+*EASY MED* is a *prototype* website for booking doctor appointments.  
+It’s a *simple, modern, and beginner-friendly* demo of how an online medical booking platform might work.  
 
-=> About the Project
-This website shows the structure and basic functionalities of a medical appointment booking system.
+> 🎯 *Purpose:* To showcase the *design, flow, and basic features* of an appointment booking system without storing real data.
 
-It is mainly developed as a college project for demonstration, review, and learning purposes.
+------
 
-Note: The website does not store registration or booking data, because GitHub Pages does not support a database. It serves as a front-end prototype only.
+## 🌐 Live Demo
+🔗 [*View EASY MED Website*](https://vishalhirani978.github.io/EASY-MED-medical-website-/)  
 
-=> Technologies Used
+------
 
+## 📖 About the Project
+EASY MED was created as a *University/College Project* to demonstrate:
+- 🩺 How patients can *book appointments online*.
+- 🖥 How a *smooth, user-friendly interface* makes booking easy.
+- ⚙ How *frontend + backend* could work together in a real-world app.
 
-HTML
+⚠ *Disclaimer:*  
+- GitHub Pages *cannot store data, so all bookings are **temporary*.  
+- This is *only a prototype* — not for real medical use.
 
-CSS
+-----
 
-JavaScript
+## 🛠 Tech Stack
+This project uses a blend of *frontend* and *backend* technologies:
 
-Java
+| Layer       | Technology |
+|-------------|------------|
+| 🎨 Frontend | HTML, CSS, JavaScript |
+| ⚙ Backend   | Java |
+| 💾 Database | SQLite |
 
-SQLite
+-----
 
-=> Project Purpose
-This project is created mainly for:
+## 🎯 Project Goals
+EASY MED is built for:
+- 📚 *Students* learning how online booking systems work.
+- 🧑‍🏫 *Educators* who want to review and provide feedback.
+- 💡 *Beginners* exploring both frontend and backend basics.
 
-Students and learners who want to see how an online booking system could be built.
+-----
 
-Reviewers and educators to provide feedback and suggestions.
+## ✨ Features
+✅ Clean and modern *UI design*  
+✅ Easy-to-use *appointment booking form*  
+✅ Responsive layout for *desktop and mobile*  
+✅ Beginner-friendly *code structure*  
+✅ Demonstrates *frontend + backend flow*  
 
-⚠️ Important Note
-This website is only a prototype.
+-----
 
-It does not store any real user data.
+## 🖥 How to Run Locally
+Follow these steps to test or modify EASY MED:
 
-It shows how the interface and booking flow could look in a real application.
+1. *Clone the repository*  
+   ```bash
+   git clone https://github.com/yourusername/easy-med.git
 
-🤝 Contributing
-Feedback and suggestions are welcome to help improve this project.
+• Simply open index.html in your browser.
+• Run Backend Server.
+• Install Java and SQLite.
+• Compile and run your Java backend files.
+
+-----
+
+## 👨‍💻 Contributors
+[Ghullam Qadir](https://github.com/GhullamQadir)
+[Vishal Hirani](https://github.com/vishalhirani978)
+[Abdul Moeez](https://github.com/I-abMoeez)
